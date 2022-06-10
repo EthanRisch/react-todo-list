@@ -1,0 +1,21 @@
+section{
+    overflow: auto;
+}
+
+h3{
+    margin: .5rem 0 0 1ch;
+    color: #001858;
+}
+
+p{
+    margin: 1rem 0 .2rem 3ch;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+button{
+    margin: 1rem .3rem .5rem 0;
+}
