@@ -1,4 +1,5 @@
 import TodoItem from "./TodoItem";
+import NewTodoCard from "./NewTodoCard";
 
 function Todos() {
   const DUMMY_DATA = [
@@ -17,6 +18,7 @@ function Todos() {
       {DUMMY_DATA.map((item) => (
         <TodoItem title={item.title} description={item.description} />
       ))}
+      <NewTodoCard />
     </section>
   );
 }

@@ -1,12 +1,5 @@
 .card{
-
     margin: 3ch;
-
     min-height: 4rem;
     width: 30ch;
-    background: #f3d2c1;
-    box-shadow: 2px, black;
-    border-radius: 3px;
-    color: #172c66;
-    border: 1.5px solid #e9ab8b;
 }

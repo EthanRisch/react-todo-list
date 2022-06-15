@@ -1,11 +1,11 @@
 .lists{
-    margin-top: 10px;
+    margin-top: 3rem;
     display: flex;
     justify-content: space-evenly;
 }
 
 .lists > div{
-    background: #e29167;
+    background: #EDD3FF;
     padding: 1rem;
 }
 

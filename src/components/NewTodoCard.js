@@ -1,11 +1,11 @@
 import Card from "../ui/Card";
 
+import TodoItem from "./TodoItem";
+
 function NewTodoCard() {
   return (
     <Card>
-      <div>
-        <button>Add New Todo Item</button>
-      </div>
+      <TodoItem title="New Todo Item" />
     </Card>
   );
 }

@@ -5,12 +5,12 @@
 }
 
 body{
-  background: #fef9f7;
-  color: #172c66;
+  background: #130020;
+  color: #130020;
 }
 
 button{
-  background: #f582ae;
+  background: none;
   border: none;
   border-radius: 2px;
   padding: .2rem .4rem;
