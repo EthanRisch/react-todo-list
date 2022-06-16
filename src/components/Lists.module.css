@@ -8,6 +8,12 @@
     background: #EDD3FF;
     padding: 1rem;
     border-radius: 6px;
+    min-width: 40ch;
+    min-height: 5rem;
+}
+
+h2{
+    font-size: 1.5rem;
 }
 
 

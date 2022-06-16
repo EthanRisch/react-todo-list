@@ -1,6 +1,7 @@
 import classes from "./Lists.module.css";
 
 import ListItem from "./ListItem";
+import NewList from "./NewList";
 
 function Lists() {
   const DUMMY_DATA = [
@@ -8,18 +9,15 @@ function Lists() {
       title: "Go shopping",
       id: 0,
     },
-    {
-      title: "Study for math",
-      id: 1,
-    },
   ];
 
   return (
-    <section className={classes.lists}>
+    <div className={classes.lists}>
       {DUMMY_DATA.map((list) => (
         <ListItem title={list.title} key={list.id} />
       ))}
-    </section>
+      <NewList />
+    </div>
   );
 }
 
