@@ -1,13 +1,11 @@
 import "./App.css";
 
-import Todos from "./components/Todos";
-import NewTodoCard from "./components/NewTodoCard";
+import Lists from "./components/Lists";
 
 function App() {
   return (
     <div>
-      <Todos />
-      <NewTodoCard />
+      <Lists />
     </div>
   );
 }

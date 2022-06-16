@@ -2,13 +2,46 @@ section{
     overflow: auto;
 }
 
+input, input:focus, input::placeholder{
+    background: none;
+    border: none;
+    outline: none;
+    margin: .4rem 0 0 1ch;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #130020;
+}
+
+
 h3{
-    margin: .5rem 0 0 1ch;
-    color: #001858;
+    margin: .4rem 0 0 1ch;
+    font-weight: 500;
+}
+
+span{
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+}
+
+span > button {
+    position: relative;
+    top: 5px;
+    margin: 0;
+    padding: 0;
+
 }
 
 p{
     margin: 1rem 0 .2rem 3ch;
+}
+
+hr{
+    width: 90%;
+    margin: 0 .4rem;
+    background-color: #130020;
+    height: 1px;
+    border: none;
 }
 
 .buttons{
@@ -17,5 +50,5 @@ p{
 }
 
 button{
-    margin: 1rem .3rem .5rem 0;
+    margin: 1rem 1rem .5rem 0;
 }

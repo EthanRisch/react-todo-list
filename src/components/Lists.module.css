@@ -1,0 +1,13 @@
+.lists{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lists > div{
+    background: #EDD3FF;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+
