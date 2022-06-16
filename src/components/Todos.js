@@ -12,9 +12,21 @@ function Todos() {
   const firebaseLink = process.env.REACT_APP_FIREBASE_LINK;
 
   async function handleNewTodo(todo) {
-    await fetch(firebaseLink, {
+    await fetch(firebaseLink + ".json", {
       method: "POST",
       body: JSON.stringify(todo),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(() => {});
+    setRender(render + 1);
+  }
+
+  async function handleDelete(id) {
+    let newLink = `${firebaseLink}/${id}.json`;
+    console.log(newLink);
+    await fetch(newLink, {
+      method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
@@ -26,7 +38,7 @@ function Todos() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(firebaseLink)
+    fetch(firebaseLink + ".json")
       .then((response) => {
         return response.json();
       })
@@ -61,6 +73,7 @@ function Todos() {
           description={item.description}
           id={item.id}
           key={item.id}
+          handleDelete={handleDelete}
         />
       ))}
       <NewTodoCard handleNewTodo={handleNewTodo} />

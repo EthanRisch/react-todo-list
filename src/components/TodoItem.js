@@ -18,6 +18,10 @@ function TodoItem(props) {
     props.onEditTitle(title, props.id);
   };
 
+  function handleDelete() {
+    props.handleDelete(props.id);
+  }
+
   return (
     <Card>
       <section>
@@ -33,7 +37,7 @@ function TodoItem(props) {
         <hr />
         <div className={classes.buttons}>
           <button>
-            <img src={x} alt="" />
+            <img src={x} alt="" onClick={handleDelete} />
           </button>
           <button>
             <img src={check} alt="" />
