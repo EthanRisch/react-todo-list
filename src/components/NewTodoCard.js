@@ -1,11 +1,36 @@
+import classes from "./NewTodoCard.module.css";
+
+import { useRef } from "react";
+
 import Card from "../ui/Card";
 
-import TodoItem from "./TodoItem";
+function NewTodoCard(props) {
+  const titleInputRef = useRef();
 
-function NewTodoCard() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const todo = {
+      title: titleInputRef.current.value,
+      description: "",
+    };
+    props.handleNewTodo(todo);
+  };
+
   return (
     <Card>
-      <TodoItem title="New Todo Item" />
+      <section>
+        <span className={classes.text}>
+          {/*<h3>{props.title}</h3>*/}
+          <form action="" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Create New Todo..."
+              ref={titleInputRef}
+            />
+          </form>
+        </span>
+        <hr />
+      </section>
     </Card>
   );
 }
