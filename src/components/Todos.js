@@ -9,7 +9,7 @@ function Todos() {
   const [loadedTodos, setLoadedTodos] = useState([]);
   const [render, setRender] = useState(0);
 
-  const firebaseLink = "";
+  const firebaseLink = process.env.REACT_APP_FIREBASE_LINK;
 
   async function handleNewTodo(todo) {
     await fetch(firebaseLink, {
