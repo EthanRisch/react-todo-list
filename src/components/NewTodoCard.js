@@ -13,7 +13,7 @@ function NewTodoCard(props) {
       title: titleInputRef.current.value,
       description: "",
     };
-    props.handleNewTodo(todo);
+    props.handleNewTodo(todo, props.listKey);
   };
 
   return (

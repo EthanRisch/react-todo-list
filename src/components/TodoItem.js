@@ -11,12 +11,17 @@ import hamburger from "./img/Vectoroptions.svg";
 function TodoItem(props) {
   const titleInputRef = useRef();
 
+  // TODO Fix this so that it works
   const handleSubmit = (e) => {
     e.preventDefault();
     const title = titleInputRef.current.value;
 
-    props.onEditTitle(title, props.id);
+    props.onEditTitle(title, props.id, props.listKey);
   };
+
+  function handleDelete() {
+    props.handleDelete(props.id, props.listKey);
+  }
 
   return (
     <Card>
@@ -33,7 +38,7 @@ function TodoItem(props) {
         <hr />
         <div className={classes.buttons}>
           <button>
-            <img src={x} alt="" />
+            <img src={x} alt="" onClick={handleDelete} />
           </button>
           <button>
             <img src={check} alt="" />
