@@ -77,7 +77,12 @@ function Lists() {
     <div className={classes.lists}>
       {loadedLists.map((list) => (
         // how do i get the id, again?
-        <ListItem title={list.title} key={list.id} listKey={list.id} />
+        <ListItem
+          title={list.title}
+          key={list.id}
+          listKey={list.id}
+          handleDeleteList={handleDeleteList}
+        />
       ))}
       <NewList handleNewList={handleNewList} />
     </div>
