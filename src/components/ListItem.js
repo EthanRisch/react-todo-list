@@ -4,7 +4,7 @@ function ListItem(props) {
   return (
     <div>
       <h2>{props.title}</h2>
-      <Todos />
+      <Todos listKey={props.listKey} />
     </div>
   );
 }

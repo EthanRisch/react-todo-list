@@ -11,15 +11,16 @@ import hamburger from "./img/Vectoroptions.svg";
 function TodoItem(props) {
   const titleInputRef = useRef();
 
+  // TODO Fix this so that it works
   const handleSubmit = (e) => {
     e.preventDefault();
     const title = titleInputRef.current.value;
 
-    props.onEditTitle(title, props.id);
+    props.onEditTitle(title, props.id, props.listKey);
   };
 
   function handleDelete() {
-    props.handleDelete(props.id);
+    props.handleDelete(props.id, props.listKey);
   }
 
   return (

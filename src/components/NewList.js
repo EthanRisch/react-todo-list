@@ -2,25 +2,28 @@ import { useRef } from "react";
 
 import classes from "./NewList.module.css";
 
-function NewList() {
+function NewList(props) {
   const titleInputRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const todo = {
+    const list = {
       title: titleInputRef.current.value,
-      description: "",
     };
+    console.log(`new list submit: ${e}`);
+    props.handleNewList(list);
   };
 
   return (
     <div>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <input
           className={classes.title}
           type="text"
           placeholder="Create New List..."
+          ref={titleInputRef}
         />
+        <button type="submit"></button>
       </form>
     </div>
   );
